@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  background-image: url('/nasa-media-search/stars.jpg');
+  background-image: url('../public/stars.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
