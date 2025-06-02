@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/nasa-media-search/static/css/main.fc8ce5f6.css",
+    "main.css": "/nasa-media-search/static/css/main.9730e073.css",
     "main.js": "/nasa-media-search/static/js/main.47e4b0e2.js",
     "static/js/453.ed3810f9.chunk.js": "/nasa-media-search/static/js/453.ed3810f9.chunk.js",
     "index.html": "/nasa-media-search/index.html",
-    "main.fc8ce5f6.css.map": "/nasa-media-search/static/css/main.fc8ce5f6.css.map",
+    "main.9730e073.css.map": "/nasa-media-search/static/css/main.9730e073.css.map",
     "main.47e4b0e2.js.map": "/nasa-media-search/static/js/main.47e4b0e2.js.map",
     "453.ed3810f9.chunk.js.map": "/nasa-media-search/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fc8ce5f6.css",
+    "static/css/main.9730e073.css",
     "static/js/main.47e4b0e2.js"
   ]
 }
