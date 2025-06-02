@@ -1,38 +1,262 @@
+/* ==========================
+  GLOBAL LAYOUT
+========================== */
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-position: center;
+  background-repeat: no-repeat;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+}
+
+/* ==========================
+  TYPOGRAPHY
+========================== */
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 48px;
+  font-weight: 1000;
+  color: #6a4fd3;
+  margin: 80px 0 30px;
+  text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff, -2px 0 0 #fff, 2px 0 0 #fff, 0 -2px 0 #fff, 0 2px 0 #fff;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #6a4fd3;
+  margin-bottom: 20px;
+  text-shadow: inherit;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #6a4fd3;
+  margin-bottom: 12px;
+  text-shadow: inherit;
+}
+
+/* ==========================
+  FORM ELEMENTS
+========================== */
+
+/* INPUT */
+input {
+  padding: 12px 16px;
+  font-size: 16px;
+  width: 300px;
+  margin-bottom: 20px;
+  border: 2px solid #3da9fc;
+  border-radius: 8px;
+  background-color: #10131a;
+  color: #f1f1f1;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #89c2ff;
+}
+
+input::placeholder {
+  color: #999;
+  font-size: 16px;
+}
+
+/* SELECT */
+.select-filter {
+  font-size: 16px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  padding: 0 12px;
+  height: 42px;
+  background-color: white;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  min-width: 120px;
+}
+
+/* ==========================
+  IMAGES
+========================== */
+
+img {
+  max-width: 250px;
+  margin: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.6);
+}
+
+/* ==========================
+  BUTTONS
+========================== */
+
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+  background-color: #6a4fd3;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #61bfff;
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+/* REUSABLE BUTTON CLASS */
+.button {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 0 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 42px;
+  box-sizing: border-box;
+  min-width: 120px;
+  background-color: white;
+  color: black;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #f0f0f0;
+}
+
+.button-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  font-size: 16px;
+  border: 1px solid #6a4fd3;
+  border-radius: 6px;
+  cursor: pointer;
+  height: 42px;
+  box-sizing: border-box;
+  background-color: #6a4fd3;
   color: white;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  text-decoration: none;
+  min-width: 100px;
 }
 
-.App-link {
-  color: #61dafb;
+.button-primary:hover {
+  background-color: #5a3fc2;
+  border-color: #5a3fc2;
 }
 
-@keyframes App-logo-spin {
-  from {
+/* ==========================
+  LINKS
+========================== */
+
+a {
+  display: block;
+  margin-top: 20px;
+  color: #3da9fc;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #61bfff;
+  text-decoration: underline;
+}
+
+/* ==========================
+  SPINNER
+========================== */
+
+.spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3da9fc;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
+}
+
+/* ==========================
+  GRID + CARD
+========================== */
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 220px;
+  height: 300px;
+  background-color: #1e1e2f;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-title {
+  color: #fff;
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
